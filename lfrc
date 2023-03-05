@@ -94,10 +94,10 @@ map gs cd ~/.local/bin
 map gt cd ~/.local/share/Trash/files
 
 # drag and drop
-cmd drag push &python<space>c:/Users/silent/slut-dragon/lf_scripts/drag.py<space>multi<space>%fx%<enter>
+cmd drag push &python<space><dir to script>/lf_scripts/drag.py<space>multi<space>%fx%<enter>
 # close the drag window after one use
 cmd dragonce push 
-&python<space>C:/Users/silent/slut-dragon/lf_scripts/drag.py<space>once<space>%fx%<enter>
+&python<space><dir to script>/lf_scripts/drag.py<space>once<space>%fx%<enter>
 map D push :dragonce<enter>
 
 
@@ -109,7 +109,7 @@ set filesep " "
 cmd rename %sh -c 'mv -i %f% $0'
 map r push :rename<space>
 # reload config file using f5
-map <f-5> push :source<space>C:/Users/Lion/AppData/Local/lf/lfrc<enter>
+map <f-5> push :source<space><path ../>/AppData/Local/lf/lfrc<enter>
 # use a and A to create files and directories
 cmd createfile %sh -c 'touch $0'
 cmd createdir %sh -c 'mkdir $0'
